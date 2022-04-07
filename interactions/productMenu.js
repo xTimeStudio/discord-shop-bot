@@ -50,9 +50,9 @@ module.exports = {
                     );
                 (async function (type, interaction) {
                     let Arr = {
-                        f: {
-                            product: client.products.f,
-                            price: client.prices.Full.Price.price
+                        example: {
+                            product: client.products.example,
+                            price: client.prices.Example.Price.price
                         },
                         c: {
                             product: client.products.c,
