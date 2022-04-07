@@ -15,13 +15,13 @@ Before you buy, check your balance!
                     .setPlaceholder('Choose product')
                     .addOptions([
                         {
-                            label: `Test product`,
-                            value: 'f',
+                            label: `Example Product | ${client.prices.Example.Price.price} RUB`,
+                            value: 'example',
                             emoji: {
                                 name: 'red',
                                 id: '951586432324096100'
                               },
-                            description: 'Test product description here.'
+                            description: 'Example\'s product description'
                         },
                     ])
             )

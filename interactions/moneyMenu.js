@@ -7,10 +7,11 @@ module.exports = {
             case 'f':
             case 'c':
             case 'fg':
+            case 'example':
             case 'cg':
             case 'fy':
             case 'cy':
-                let price = interaction.values[0] == 'f' ? client.prices.Full.Price.price : interaction.values[0] == 'c' ? client.prices.Classic.Price.price : interaction.values[0] == 'fg' ? client.prices.FullGuar.Price.price : interaction.values[0] == 'cg' ? client.prices.ClassicGuar.Price.price : interaction.values[0] == 'fy' ? client.prices.FullY.Price.price : client.prices.ClassicY.Price.price;
+                let price = interaction.values[0] == 'example' ? client.prices.Example.Price.price : interaction.values[0] == 'c' ? client.prices.Classic.Price.price : interaction.values[0] == 'fg' ? client.prices.FullGuar.Price.price : interaction.values[0] == 'cg' ? client.prices.ClassicGuar.Price.price : interaction.values[0] == 'fy' ? client.prices.FullY.Price.price : client.prices.ClassicY.Price.price;
 
                 const billId = client.qiwiApi.generateId();
                 const fields = {

@@ -34,42 +34,17 @@ client.voiceId = '951547118697472060';
 client.roleId = "951547175194738768";
 client.guildId = '947905832132182096';
 client.prices = {
-Full: {
-    Price: 250,
-},
-Classic: {
-    Price: 150,
-},
-FullGuar: {
-    Price: 370,
-},
-ClassicGuar: {
-    Price: 250,
-},
-FullY: {
-    Price: 2000,
-},
-ClassicY: {
-    Price: 1000
+Example: {
+    Price: 1
 }
 }
 
 client.products = {
-    f: [],
-    c: [],
-    fg: [],
-    cg: [],
-    fy: [],
-    cy: []
+    example: []
 }
 
 client.updatePrice = async function() {
-    client.prices.Full.Price = await checkPriceProduct('f', 250);
-    client.prices.Classic.Price = await checkPriceProduct('c', 150);
-    client.prices.FullGuar.Price = await checkPriceProduct('fg', 370);
-    client.prices.ClassicGuar.Price = await checkPriceProduct('cg', 250);
-    client.prices.FullY.Price = await checkPriceProduct('fy', 2000);
-    client.prices.ClassicY.Price = await checkPriceProduct('cy', 1000);
+    client.prices.Example.Price = await checkPriceProduct('example', 1);
 }
 
 setInterval(async () => {
@@ -131,24 +106,14 @@ client.createBill = async function (billId, author, type) {
     }
 })();
 client.updateProducts = async function () {
-    client.products.f = [];
-    client.products.c = [];
-    client.products.fg = [];
-    client.products.cg = [];
-    client.products.fy = [];
-    client.products.cy = [];
+    client.products.example = [];
 
     ProductModel.find({}, function(err, products) {
         if(!products) return;
         products.forEach(product => {
             
             switch(product.type) {
-                case 'f':
-                case 'c':
-                case 'cg':
-                case 'fg':
-                case 'fy':
-                case 'cy':
+                case 'example':
                 client.products[product.type].push(product);
                     break;      
             }

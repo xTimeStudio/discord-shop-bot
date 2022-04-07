@@ -11,6 +11,7 @@ module.exports = {
             case 'fg':
             case 'cg':
             case 's':
+            case 'example':
             case 'fy':
             case 'cy':
                 const NoStock = new Discord.MessageEmbed()
@@ -99,7 +100,7 @@ module.exports = {
                             user_.roles.add(role).catch(err => { });
                         })(interaction.user);
                         const obj = {
-                            productName: type == 'f' ? 'Nitro Full' : type == 'c' ? 'Nitro Classic' : type == 'fg' ? 'Nitro Full Гарантия' : type == 'cg' ? 'Nitro Classic Гарантия' : type == 'fy' ? 'Nitro Boost Year' : 'Nitro Classic Year',
+                            productName: type == 'example' ? 'Example' : type == 'c' ? 'Nitro Classic' : type == 'fg' ? 'Nitro Full Гарантия' : type == 'cg' ? 'Nitro Classic Гарантия' : type == 'fy' ? 'Nitro Boost Year' : 'Nitro Classic Year',
                             productPrice: Arr[type].price,
                             productLink: Arr[type].product[0].link
                         };
@@ -109,7 +110,7 @@ module.exports = {
                         typeof Arr[type].product[0].addressProduct == typeof String ?
                             interaction.update({
                                 content: `
-                                **<:FantasticGift:936484399199969300> Ссылка на товар:** ${Arr[type].product[0].link}
+                                **<:FantasticGift:936484399199969300> Product:** ${Arr[type].product[0].link}
                                 **Адрес (Доступ к подписке):** ${Arr[type].product[0].addressProduct}
                                 `, embeds: [Bought], components: [rowRev]
                             }).catch(err => {
@@ -135,10 +136,10 @@ module.exports = {
                             user = await UserModel.findOne({ login: interaction.user.id });
                             try {
                                 userBuy.setDescription(`
-Пользователь <@${interaction.user.id}> | ${interaction.user.id} приобрел себе ${obj.productName} за ${obj.productPrice}
-Текущий Баланс: ${user.balance} (до покупки - ${(user.balance + obj.productPrice)})
-Потратил: ${user.total}
-Ссылка на товар: ${obj.productLink}
+User <@${interaction.user.id}> | ${interaction.user.id} bought ${obj.productName} for ${obj.productPrice}rub
+Current balance: ${user.balance} (before - ${(user.balance + obj.productPrice)})
+Spend: ${user.total}
+Product: ${obj.productLink}
 `)
 .setFooter(interaction.user.username + '#' + interaction.user.discriminator)
                                 await WlModel.find({}, async function(err, wl) {
