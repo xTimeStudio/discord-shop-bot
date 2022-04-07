@@ -38,17 +38,17 @@
         }
     },
     "introduction": {
-        "owner": "Unknown",
-        "ownerId": "noid",
+        "owner": "xTime#0364",
+        "ownerId": "532889574045777920",
         "Embed": {
             "title": "**Bot instruction**",
             "description": "<a:910246329148649522:939873792027684915> *How to purchase:*\n`1.` Write command `/start`\n`2.` Open profile - add cash - choose the price - paying\n`3.` Choose product - buying",
 
-            "field1":"<:qiwi:939442963191308308> **Qiwi Method Payment:0**",
+            "field1":"<:qiwi:939442963191308308> **Qiwi Method Payment**",
             "field1_1":"**`You can pay only via QIWI wallet`**",
 
-            "field2":"<:_moneycash_:939231510798688337> **Быстрое пополнение:**",
-            "field2_1":"**`Бот автоматически проверит на наличии перевода денег физ. лицу, и пополнит ваш баланс!`**",
+            "field2":"<:_moneycash_:939231510798688337> **Quick checker:**",
+            "field2_1":"**`Bot automacly will verify your transaction`**",
 
             "field3":"<a:nitroclassic:937063722118176798> **Наличие товаров:**",
             "field3_1":"**`Товары поступают ежеденевно! Включите уведомления(Вы должны быть на сервере, чтобы получить роль для пинга)!`**",
