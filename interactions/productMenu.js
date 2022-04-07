@@ -6,11 +6,6 @@ module.exports = {
     async execute(client, interaction, Discord, wait, UserModel, { link, account }) {
         try {
         switch (interaction.values[0]) {
-            case 'f':
-            case 'c':
-            case 'fg':
-            case 'cg':
-            case 's':
             case 'example':
             case 'fy':
             case 'cy':
@@ -53,26 +48,6 @@ module.exports = {
                         example: {
                             product: client.products.example,
                             price: client.prices.Example.Price.price
-                        },
-                        c: {
-                            product: client.products.c,
-                            price: client.prices.Classic.Price.price
-                        },
-                        fg: {
-                            product: client.products.fg,
-                            price: client.prices.FullGuar.Price.price
-                        },
-                        cg: {
-                            product: client.products.cg,
-                            price: client.prices.ClassicGuar.Price.price
-                        },
-                        fy: {
-                            product: client.products.fy,
-                            price: client.prices.FullY.Price.price
-                        },
-                        cy: {
-                            product: client.products.cy,
-                            price: client.prices.ClassicY.Price.price
                         },
                         // s: {
                         //     product: client.products.s,
