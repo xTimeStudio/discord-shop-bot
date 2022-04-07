@@ -65,9 +65,9 @@ async function getInfo(message, UserModel, Discord) {
                .setTitle(`Bot's statistic`)
                .setDescription(`
                **Enabled push notices: \`${count.notices}\` from \`${count.total_all}\` users**
-               \n**Last 24 hours bot used by \`${count.lastUse}\` users**
-               \n**Users Count: \`${count.buyers}\` , count = \`${count.total}\`**
-               \n**Count users with balance: \`${count.buyers_wait}\`, their balance equils to \`${count.buyers_wait_total}\`**
+               \n**Last 24 hours bot used by \`${count.lastUse}\` user(-s)**
+               \n**Buyers: \`${count.buyers}\` spend \`${count.total}\`RUB**
+               \n**Users with >1 balance \`${count.buyers_wait}\` total in - \`${count.buyers_wait_total}\`RUB**
                `)
                .setFooter(message.author.username + '#' + message.author.discriminator)
                .setTimestamp();
