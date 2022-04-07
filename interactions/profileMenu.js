@@ -10,15 +10,15 @@ module.exports = {
                     let string = "";
                     if (data.history.length > 0) {
                         if (data.history.length == 1) {
-                            string = `Название: ${data.history[0].productName}(${data.history[0].productPrice}RUB)\nТовар: ${data.history[0].productLink}\n`
+                            string = `Name: ${data.history[0].productName}(${data.history[0].productPrice}RUB)\nProduct: ${data.history[0].productLink}\n`
                         } else {
                             data.history.forEach(async dat => {
                                 if (data.history.length == 1) {
-                                    string = `Название: \`${dat.productName}(${dat.productPrice}RUB)\`\nТовар: \`${dat.productLink}\`\n`
+                                    string = `Name: \`${dat.productName}(${dat.productPrice}RUB)\`\nProduct: \`${dat.productLink}\`\n`
                                 } else if((data.history.length -1)== data.history.indexOf(dat)) {
-                                    string += `Название: \`${dat.productName}(${dat.productPrice}RUB)\`\nТовар: \`${dat.productLink}\`\n`
+                                    string += `Name: \`${dat.productName}(${dat.productPrice}RUB)\`\nProduct: \`${dat.productLink}\`\n`
                                 } else {
-                                string += `Название: \`${dat.productName}(${dat.productPrice}RUB)\`\nТовар: \`${dat.productLink}\`\n`
+                                string += `Name: \`${dat.productName}(${dat.productPrice}RUB)\`\nТовар: \`${dat.productLink}\`\n`
                                 }
                             })
                         }
