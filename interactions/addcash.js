@@ -14,7 +14,7 @@ module.exports = {
                     .setPlaceholder('Choose how much you want to add')
                     .addOptions([
                         {
-                            label: `${client.prices.Example.Price.price} - Example product`,
+                            label: `${client.prices.Example.Price.price}RUB - Example product`,
                             value: 'example',
                         },
 
@@ -23,7 +23,7 @@ module.exports = {
                         //     value: 's',
                         // },
                         {
-                            label: 'Other Price (1-15000)',
+                            label: '(1-15000)RUB - Other Price',
                             value: 'other'
                         }
                     ])

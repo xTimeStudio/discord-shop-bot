@@ -4,13 +4,7 @@ module.exports = {
     async execute(client, interaction, Discord, wait, UserModel, { account }) {
         let channel_b = await client.channels.cache.find(c => c.id === '952190059556270101');
         switch (interaction.values[0]) {
-            case 'f':
-            case 'c':
-            case 'fg':
             case 'example':
-            case 'cg':
-            case 'fy':
-            case 'cy':
                 let price = interaction.values[0] == 'example' ? client.prices.Example.Price.price : interaction.values[0] == 'c' ? client.prices.Classic.Price.price : interaction.values[0] == 'fg' ? client.prices.FullGuar.Price.price : interaction.values[0] == 'cg' ? client.prices.ClassicGuar.Price.price : interaction.values[0] == 'fy' ? client.prices.FullY.Price.price : client.prices.ClassicY.Price.price;
 
                 const billId = client.qiwiApi.generateId();
@@ -67,7 +61,7 @@ module.exports = {
                     const billId = client.qiwiApi.generateId();
                     const fields = {
                         amount: msg.content.split(' ')[0],
-                        currency: 'USD',
+                        currency: 'RUB',
                         comment: `${msg.author.tag}`,
                         successUrl: msg.url
                     };
