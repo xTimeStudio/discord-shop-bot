@@ -41,16 +41,8 @@ ${data.history.length > 0 ? string : '**`Empty`**'}
                                 .setCustomId('profile_return')
                                 .setStyle('SECONDARY'),
                         );
-                    const row2 = new Discord.MessageActionRow()
-                        .addComponents(
-                            new Discord.MessageSelectMenu()
-                                .setCustomId('profile-menu')
-                                .setPlaceholder('Choose category')
-                                .addOptions([
-                                ])
-                        );
 
-                    await interaction.update({ embeds: [embed], components: [row2, row], ephemeral: true, flags: 64 }).catch(err => { })
+                    await interaction.update({ embeds: [embed], components: [row], ephemeral: true, flags: 64 }).catch(err => { })
                 })()
                 break;
             

@@ -94,7 +94,7 @@ module.exports = {
                             :
                             interaction.update({
                                 content: `
-                                 **<:FantasticGift:936484399199969300> Product:** ${Arr[type].product[0].link}
+                                 **🎁 Product:** ${Arr[type].product[0].link}
                                  `, embeds: [Bought], components: [rowRev]
                             }).catch(err => {
 
