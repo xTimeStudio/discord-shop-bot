@@ -24,7 +24,7 @@ async function isAccountNew(user) {
 
         let doc = await new UserModel({
             idUser: user.id,
-            balance: 0,
+            balance: 10,
             permission: false,
             total: 0,
             history: [],
